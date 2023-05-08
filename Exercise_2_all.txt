@@ -1,0 +1,223 @@
+
+#Q1: Write a Python program to sum all the items in a list.
+
+a = [10,20,30,40,50]
+
+b = sum(a)
+
+print(b)
+
+
+150
+
+
+
+#Q2: Write a Python program to get the largest number from a list.
+a = [10,20,30,40,50]
+
+b = max(a)
+
+print(b)
+
+
+50
+
+
+
+
+
+
+#Q3: Write a Python program to get the smallest number from a list.
+
+a = [10,20,30,40,50]
+
+b = min(a)
+
+print(b)
+
+
+10
+
+
+
+
+
+
+
+#Q4: Write a Python program to display the first and last colors from the following list.
+#color_list = [Red,Green,White ,Black]
+
+color_list = ["Red","Green","White","Black"]
+
+a = len(color_list)
+print("#######################")
+print("First element of list is: ",color_list[0])
+print("Last element of list is: ",color_list[a-1])
+
+#######################
+First element of list is:  Red
+Last element of list is:  Black
+
+
+#Q5: Write a Python program to add ing at the end of a given string (length should be at least 3).
+#If the given string is already ends with ing then add ly instead.
+strng = str(input("Enter a String: "))
+st = strng
+a = len(st)
+print(a)
+print("#########################")
+if a > 3:
+    if st[-3:] == "ing" :
+        print(st[:-3] + "ly")
+    else:
+        print(st[:-3] + "ing")
+else:
+    print("string has less then 3 letters!!")
+    
+Enter a String: being
+5
+#########################
+bely
+
+
+
+
+#Q6: The marks obtained by a student in 5 different Subjects are input through a keyboard. The
+#Student gets a division as per the following rules.
+#1. Percentage above or equal to 60 – First Division
+#2. Percentage between 50 and 59 – Second Division
+#3. Percentage between 40 and 49 – Third Division
+#4. Percentage less than 40 – Fail
+
+sub1 = int(input("Enter obtained marks in sub1: "))
+sub2 = int(input("Enter obtained marks in sub2: "))
+sub3 = int(input("Enter obtained marks in sub3: "))
+sub4 = int(input("Enter obtained marks in sub4: "))
+sub5 = int(input("Enter obtained marks in sub5: "))
+
+marks = ((sub1+sub2+sub3+sub4+sub5) * 100 )/500
+
+print("###############################")
+
+if marks >= 60 :
+    print("you are in first class")
+
+elif marks > 50 :
+    print("you are in second class")
+
+elif marks >40 :
+    print("you are in third class")
+else :
+    print("you are fail")
+
+
+Enter obtained marks in sub1: 20
+Enter obtained marks in sub2: 50
+Enter obtained marks in sub3: 60
+Enter obtained marks in sub4: 88
+Enter obtained marks in sub5: 90
+###############################
+you are in first class
+
+
+
+
+#Q7: write a Python program to find the largest number among the three input numbers
+
+num1 = int(input("Enter num1: "))
+num2 = int(input("Enter num2: "))
+num3 = int(input("Enter num3: "))
+
+print("###############################")
+
+if(num1 > num2 and num1 > num3):
+    print(num1," is greatest")
+
+elif(num2 > num3 and num2 > num1):
+    print(num2," is greatest")
+else:
+     print(num3," is greatest")
+    
+
+Enter num1: 20
+Enter num2: 100
+Enter num3: 50
+###############################
+100  is greatest
+
+
+#Q8: Write a Python program to check if the input year is a leap year or not.
+
+year=int(input("Enter year to be checked:"))
+if(year%4==0 and year%100!=0 or year%400==0):
+    print("The year is a leap year!")
+else:
+    print("The year isn't a leap year!")
+
+
+Enter year to be checked:2000
+The year is a leap year!
+
+
+
+#Q9: write a Program to check if a string is palindrome or not
+
+strng = str(input("Enter a String: "))
+st = strng[::-1]
+print("#####################")
+if strng == st:
+    print("palindrome!!")
+else:
+    print("not a palindrome!")
+
+
+
+
+
+Enter a String: radar
+#####################
+palindrome!!
+
+
+
+
+#Q10: Given a nested list. Write a python program to extend it with adding sub list [h, i, j]
+#in a such a way that it will look like the following list
+#Given List:
+#list1 = [a, b, [c, [d, e, [f, g], k], l], m, n]
+#Sub List to be added = [h, i, j]
+
+#Expected output:
+#[a, b, [c, [d, e, [f, g, h, i, j], k], l], m, n]
+
+l1 = ['a', 'b', ['c', ['d', 'e', ['f', 'g'], 'k'], 'l'], 'm', 'n']
+
+l2 = ['h', 'i', 'j']
+
+l1[2][1][2].extend(l2)
+
+print(l1)
+
+
+
+['a', 'b', ['c', ['d', 'e', ['f', 'g', 'h', 'i', 'j'], 'k'], 'l'], 'm', 'n']
+
+
+
+
+
+#Q11: Write a python program for Given a Python list, to find value 20 in the list, and if it is
+#present, replace it with 200. Only update the first occurrence of a value
+#list1 = [5, 10, 15, 20, 25, 50, 20]
+#Expected output:
+#list1 = [5, 10, 15, 200, 25, 50, 20]
+
+
+list1 = [5, 10, 15, 20, 25, 50, 20]
+
+a = list1.index(20)
+print(a)
+list1[a] = 200
+print(list1)
+
+
